@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>拾页 Shelf — 隐私政策 / Privacy Policy</title>
+    <style>
+      :root {
+        --bg: #fbfaf7;
+        --ink: #23231f;
+        --ink2: #5f5e5a;
+        --ink3: #918e85;
+        --line: rgba(35, 35, 31, 0.13);
+        --accent: #b1741a;
+        --serif: Georgia, "Songti SC", "Noto Serif CJK SC", serif;
+        --sans: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font: 400 14.5px/1.8 var(--sans);
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 700px; margin: 0 auto; padding: 70px 26px 100px; }
+      h1 {
+        font-family: var(--serif);
+        font-size: 28px;
+        font-weight: 500;
+        margin: 0 0 6px;
+        letter-spacing: -0.01em;
+      }
+      .meta { font-size: 12.5px; color: var(--ink3); margin: 0 0 40px; }
+      h2 {
+        font-family: var(--serif);
+        font-size: 18px;
+        font-weight: 500;
+        margin: 38px 0 10px;
+      }
+      p, li { color: var(--ink2); }
+      ul { padding-left: 20px; }
+      li { margin-bottom: 6px; }
+      a { color: var(--accent); }
+      hr { border: none; border-top: 0.5px solid var(--line); margin: 52px 0 40px; }
+      .en h1 { font-size: 24px; }
+      code {
+        font-family: ui-monospace, Consolas, monospace;
+        font-size: 0.9em;
+        background: rgba(35, 35, 31, 0.06);
+        padding: 1px 4px;
+        border-radius: 3px;
+      }
+      .back { font-size: 13px; display: inline-block; margin-bottom: 26px; color: var(--ink3); text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a class="back" href="./index.html">← 拾页 Shelf</a>
+
+      <h1>隐私政策</h1>
+      <p class="meta">适用于浏览器扩展「拾页 Shelf」（Shelf）· 最后更新：2026-11-21</p>
+
+      <p>
+        拾页不运营任何服务器，不收集、不上传、不出售用户数据。本文说明这一承诺的具体含义。
+      </p>
+
+      <h2>1. 你保存的内容</h2>
+      <p>
+        网页正文、标题、标签、阅读状态与阅读进度，全部存储在你本机浏览器的 IndexedDB 与扩展存储中。
+        这些数据不会离开你的设备，我们无法访问。
+      </p>
+
+      <h2>2. 唯一的对外网络请求</h2>
+      <p>
+        「AI 摘要」是可选功能。仅当你自行填写 API Key 并点击「生成摘要」时，当前条目的正文会被发送至
+        <strong>你所选择的</strong>模型服务商（OpenAI / DeepSeek / 通义千问），由你与服务商之间的条款约束。
+      </p>
+      <ul>
+        <li>不填写 Key，该功能不可用，其余功能不受影响；</li>
+        <li>Key 保存在本机扩展存储中，不经过任何中间服务器；</li>
+        <li>对应域名的访问权限在你填写 Key 时单独申请，可随时在扩展权限中撤销。</li>
+      </ul>
+
+      <h2>3. 页面读取</h2>
+      <p>
+        扩展声明了对 http/https 站点的访问权限，用途仅限于：在你点击「保存这一页」或按下 Alt+S 时，
+        读取当前标签页的 HTML 以提取正文。扩展不修改、不注入、不替换任何第三方网页内容。
+      </p>
+
+      <h2>4. 广告与赞助</h2>
+      <p>
+        赞助位只出现在扩展自身的界面内（侧边栏书架底部、阅读器文末），不注入第三方页面。
+        广告的曝光与点击次数仅记录在本机，用于日后向赞助商提供不含个人标识的汇总数据。
+        我们不使用广告 SDK、不做跨站追踪、不因广告请求发送任何浏览记录。
+      </p>
+
+      <h2>5. 不收集的信息</h2>
+      <ul>
+        <li>不收集浏览历史、页面内容、搜索词；</li>
+        <li>不生成设备指纹，不做用户画像；</li>
+        <li>不接入任何分析、崩溃上报或 A/B 测试服务。</li>
+      </ul>
+
+      <h2>6. 数据的删除与迁移</h2>
+      <p>
+        设置页提供三种导出：单文件 Markdown、每篇一个文件的 zip、完整 JSON 备份。
+        卸载扩展会同时删除全部本地数据，且不可恢复——请在卸载前导出。
+      </p>
+
+      <h2>7. 儿童</h2>
+      <p>本扩展不面向 13 岁以下儿童，也不会有意收集其任何信息。</p>
+
+      <h2>8. 政策变更</h2>
+      <p>
+        若本政策发生实质性变更（例如引入第三方广告网络），我们会在扩展更新说明与本页同时公布，
+        并在扩展内以显著方式提示。
+      </p>
+
+      <h2>9. 联系方式</h2>
+      <p>
+        如有隐私相关问题，可通过 Chrome 网上应用商店商品详情页所列的开发者邮箱联系我们。
+      </p>
+
+      <hr />
+
+      <div class="en">
+        <h1>Privacy Policy</h1>
+        <p class="meta">For the browser extension “Shelf” · Last updated: 2026-11-21</p>
+
+        <p>
+          Shelf runs no servers. It does not collect, upload, or sell user data. This page explains what that means in practice.
+        </p>
+
+        <h2>1. What you save</h2>
+        <p>
+          Article text, titles, tags, read state and reading progress are stored entirely in your own browser
+          (IndexedDB and extension storage). This data never leaves your device and is not accessible to us.
+        </p>
+
+        <h2>2. The only outbound request</h2>
+        <p>
+          AI summaries are optional. Only when you enter your own API key and press “Summarize” is the text of the
+          current item sent to <strong>the provider you selected</strong> (OpenAI / DeepSeek / Qwen), under your
+          agreement with that provider. Without a key the feature is unavailable and everything else still works.
+        </p>
+
+        <h2>3. Page access</h2>
+        <p>
+          The extension requests access to http/https sites solely to read the current tab’s HTML when you press
+          “Save page” or Alt+S. It does not modify, inject into, or alter any third-party page.
+        </p>
+
+        <h2>4. Ads and sponsorship</h2>
+        <p>
+          Sponsored slots appear only inside the extension’s own interface (bottom of the shelf, end of an article).
+          Impressions and clicks are counted locally only, so that aggregate, non-identifying figures can be shared
+          with a sponsor later. No ad SDK, no cross-site tracking, no browsing history attached to ad requests.
+        </p>
+
+        <h2>5. What we do not collect</h2>
+        <ul>
+          <li>No browsing history, page content, or search terms;</li>
+          <li>No device fingerprinting, no user profiling;</li>
+          <li>No analytics, crash reporting, or A/B testing services.</li>
+        </ul>
+
+        <h2>6. Deletion and portability</h2>
+        <p>
+          Settings offers three exports: one combined Markdown file, a zip with one file per article, and a full
+          JSON backup. Uninstalling removes all local data irreversibly — export first.
+        </p>
+
+        <h2>7. Children</h2>
+        <p>Shelf is not directed to children under 13 and does not knowingly collect their information.</p>
+
+        <h2>8. Changes</h2>
+        <p>
+          Material changes (for example, adding a third-party ad network) will be announced in the release notes,
+          on this page, and inside the extension.
+        </p>
+
+        <h2>9. Contact</h2>
+        <p>For privacy questions, use the developer email listed on the Chrome Web Store listing.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>拾页 Shelf — 本地优先的稍后读</title>
+    <meta name="description" content="把网页存进浏览器自己的书架。全文搜索、干净阅读、一键导出 Markdown。无需账号，不上传云端，不收集数据。" />
+    <style>
+      :root {
+        --bg: #fbfaf7;
+        --surface: #fff;
+        --ink: #23231f;
+        --ink2: #5f5e5a;
+        --ink3: #918e85;
+        --line: rgba(35, 35, 31, 0.13);
+        --accent: #b1741a;
+        --serif: Georgia, "Songti SC", "Noto Serif CJK SC", serif;
+        --sans: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font: 400 15px/1.75 var(--sans);
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 748px; margin: 0 auto; padding: 72px 28px 90px; }
+      .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 52px; }
+      .mark {
+        width: 19px; height: 21px; background: var(--ink);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 74%, 0 100%);
+      }
+      .brand span { font-size: 14px; font-weight: 500; letter-spacing: 0.02em; }
+      h1 {
+        font-family: var(--serif);
+        font-size: 40px;
+        line-height: 1.25;
+        font-weight: 500;
+        letter-spacing: -0.015em;
+        margin: 0 0 18px;
+        text-wrap: pretty;
+      }
+      .lead {
+        font-size: 16px;
+        color: var(--ink2);
+        margin: 0 0 52px;
+        max-width: 40ch;
+        text-wrap: pretty;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+        gap: 14px;
+        margin-bottom: 56px;
+      }
+      .card {
+        border: 0.5px solid var(--line);
+        border-radius: 10px;
+        padding: 18px 19px 20px;
+        background: var(--surface);
+      }
+      .card h3 { font-size: 13px; font-weight: 500; margin: 0 0 6px; }
+      .card p { font-size: 13px; color: var(--ink2); margin: 0; line-height: 1.7; }
+      h2 {
+        font-family: var(--serif);
+        font-size: 22px;
+        font-weight: 500;
+        margin: 48px 0 14px;
+        letter-spacing: -0.01em;
+      }
+      p, li { color: var(--ink2); font-size: 14.5px; }
+      ul { padding-left: 20px; margin: 0 0 18px; }
+      li { margin-bottom: 7px; }
+      .note {
+        border-left: 2px solid var(--accent);
+        padding: 2px 0 2px 14px;
+        margin: 22px 0;
+        font-size: 14px;
+        color: var(--ink2);
+      }
+      footer {
+        margin-top: 72px;
+        padding-top: 22px;
+        border-top: 0.5px solid var(--line);
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+        font-size: 13px;
+        color: var(--ink3);
+      }
+      a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+      footer a { color: var(--ink2); }
+      .cta {
+        display: inline-block;
+        margin-top: 8px;
+        background: var(--ink);
+        color: var(--bg);
+        text-decoration: none;
+        font-size: 13.5px;
+        padding: 9px 20px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="brand"><div class="mark"></div><span>拾页 Shelf</span></div>
+
+      <h1>把网页存进<br />浏览器里的书架</h1>
+      <p class="lead">
+        按 Alt+S 存入，正文自动提取。搜索能命中正文里的句子，不只标题。数据只在你自己的浏览器里，随时导出带走。
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>一个快捷键</h3>
+          <p>Alt+S 保存当前页。侧边栏里搜、读、标标签。</p>
+        </div>
+        <div class="card">
+          <h3>干净阅读</h3>
+          <p>剥掉导航与广告，字号行距可调，记住你读到哪。</p>
+        </div>
+        <div class="card">
+          <h3>真的能带走</h3>
+          <p>单篇 Markdown，或整库打成一个 zip。</p>
+        </div>
+      </div>
+
+      <h2>为什么是本地优先</h2>
+      <p>
+        2025 年 7 月，Pocket 关停，两千八百万人的收藏在三个月内被要求搬家，过期未导出的一并删除。
+        那不是意外，是集中式产品的必然结局：数据在别人服务器上，你就只有使用权。
+      </p>
+      <p>
+        拾页没有服务器。它不建账号，不同步云端，不统计你读了什么。你要备份，导出就是了；
+        你要离开，删掉扩展，什么都不剩。
+      </p>
+
+      <div class="note">
+        唯一会联网的功能是 AI 摘要：你自己填 API Key，自己点生成，正文才会发往你选的那家模型服务商。
+        不填 Key，其余功能一样不少。
+      </div>
+
+      <h2>广告怎么放</h2>
+      <ul>
+        <li>只有两个位置：书架底部、文章末尾。都标着 SPONSORED。</li>
+        <li>每个位都能点 × 永久关闭，设置页还有总开关。</li>
+        <li>不注入任何第三方网页，不改写链接，不用 AdSense。</li>
+        <li>关掉广告之后，功能完全不变。</li>
+      </ul>
+
+      <h2 style="margin-top: 56px">安装</h2>
+      <p>在 Chrome 网上应用商店搜索「拾页 Shelf」，或直接访问下方链接。</p>
+      <a class="cta" href="https://chromewebstore.google.com/" rel="noopener">打开商店页面</a>
+
+      <footer>
+        <span>Shelf 0.1.0</span>
+        <a href="./privacy.html">隐私政策 / Privacy</a>
+        <span>Made for people who actually read what they save.</span>
+      </footer>
+    </div>
+  </body>
+</html>
