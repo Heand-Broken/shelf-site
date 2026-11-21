@@ -58,21 +58,28 @@
       <a class="back" href="./index.html">← 拾页 Shelf</a>
 
       <h1>隐私政策</h1>
-      <p class="meta">适用于浏览器扩展「拾页 Shelf」（Shelf）· 最后更新：2026-11-21</p>
+      <p class="meta">适用于「拾页 Shelf」（稍后读）与「拾页标签 Shelf Tabs」（标签会话管理）· 最后更新：2026-11-22</p>
 
       <p>
-        拾页不运营任何服务器，不收集、不上传、不出售用户数据。本文说明这一承诺的具体含义。
+        拾页不运营任何服务器，不收集、不上传、不出售用户数据。本文覆盖上述两个扩展，说明这一承诺的具体含义。
       </p>
 
       <h2>1. 你保存的内容</h2>
       <p>
-        网页正文、标题、标签、阅读状态与阅读进度，全部存储在你本机浏览器的 IndexedDB 与扩展存储中。
-        这些数据不会离开你的设备，我们无法访问。
+        <strong>拾页 Shelf</strong>：网页正文、标题、标签、阅读状态与阅读进度，全部存储在你本机浏览器的
+        IndexedDB 与扩展存储中。这些数据不会离开你的设备，我们无法访问。
+      </p>
+      <p>
+        <strong>拾页标签 Shelf Tabs</strong>：标签页的标题、URL、图标地址，以及由你保存或自动备份的会话快照，
+        同样只存在本机 IndexedDB 中。它不读取网页正文，不记录你在页面上的操作，也不上传任何标签数据。
       </p>
 
       <h2>2. 唯一的对外网络请求</h2>
       <p>
-        「AI 摘要」是可选功能。仅当你自行填写 API Key 并点击「生成摘要」时，当前条目的正文会被发送至
+        <strong>拾页标签不发起任何对外网络请求。</strong>它的全部功能都在本机完成。
+      </p>
+      <p>
+        <strong>拾页 Shelf</strong>的「AI 摘要」是可选功能。仅当你自行填写 API Key 并点击「生成摘要」时，当前条目的正文会被发送至
         <strong>你所选择的</strong>模型服务商（OpenAI / DeepSeek / 通义千问），由你与服务商之间的条款约束。
       </p>
       <ul>
@@ -81,16 +88,20 @@
         <li>对应域名的访问权限在你填写 Key 时单独申请，可随时在扩展权限中撤销。</li>
       </ul>
 
-      <h2>3. 页面读取</h2>
+      <h2>3. 页面与标签访问</h2>
       <p>
-        扩展声明了对 http/https 站点的访问权限，用途仅限于：在你点击「保存这一页」或按下 Alt+S 时，
+        <strong>拾页 Shelf</strong>声明了对 http/https 站点的访问权限，用途仅限于：在你点击「保存这一页」或按下 Alt+S 时，
         读取当前标签页的 HTML 以提取正文。扩展不修改、不注入、不替换任何第三方网页内容。
+      </p>
+      <p>
+        <strong>拾页标签</strong>使用 <code>chrome.tabs</code> 权限读取当前窗口各标签的标题、URL 与图标地址，
+        用于列表展示、搜索和会话快照。它不读取页面内容，不注入脚本，不改写链接，也不把这些数据发送到任何地方。
       </p>
 
       <h2>4. 广告与赞助</h2>
       <p>
-        赞助位只出现在扩展自身的界面内（侧边栏书架底部、阅读器文末），不注入第三方页面。
-        广告的曝光与点击次数仅记录在本机，用于日后向赞助商提供不含个人标识的汇总数据。
+        赞助位只出现在扩展自身的界面内（拾页的书架底部与阅读器文末；拾页标签的标签列表底部与会话列表底部），
+        不注入第三方页面。广告的曝光与点击次数仅记录在本机，用于日后向赞助商提供不含个人标识的汇总数据。
         我们不使用广告 SDK、不做跨站追踪、不因广告请求发送任何浏览记录。
       </p>
 
@@ -103,8 +114,11 @@
 
       <h2>6. 数据的删除与迁移</h2>
       <p>
-        设置页提供三种导出：单文件 Markdown、每篇一个文件的 zip、完整 JSON 备份。
-        卸载扩展会同时删除全部本地数据，且不可恢复——请在卸载前导出。
+        <strong>拾页 Shelf</strong>提供三种导出：单文件 Markdown、每篇一个文件的 zip、完整 JSON 备份。
+        <strong>拾页标签</strong>可把全部会话导出为 JSON，也能从 JSON 导入。
+      </p>
+      <p>
+        两个扩展都只把数据存在本机。卸载扩展会同时删除全部本地数据，且不可恢复——请在卸载前导出。
       </p>
 
       <h2>7. 儿童</h2>
@@ -125,36 +139,51 @@
 
       <div class="en">
         <h1>Privacy Policy</h1>
-        <p class="meta">For the browser extension “Shelf” · Last updated: 2026-11-21</p>
+        <p class="meta">For “Shelf” (read later) and “Shelf Tabs” (tab & session manager) · Last updated: 2026-11-22</p>
 
         <p>
-          Shelf runs no servers. It does not collect, upload, or sell user data. This page explains what that means in practice.
+          Neither extension runs a server. Neither collects, uploads, or sells user data. This page covers both
+          extensions and explains what that means in practice.
         </p>
 
         <h2>1. What you save</h2>
         <p>
-          Article text, titles, tags, read state and reading progress are stored entirely in your own browser
-          (IndexedDB and extension storage). This data never leaves your device and is not accessible to us.
+          <strong>Shelf</strong>: article text, titles, tags, read state and reading progress are stored entirely in
+          your own browser (IndexedDB and extension storage). This data never leaves your device and is not
+          accessible to us.
+        </p>
+        <p>
+          <strong>Shelf Tabs</strong>: tab titles, URLs, favicon addresses, and the session snapshots you save or
+          that are created by automatic backup, are likewise stored only in local IndexedDB. It does not read page
+          text, does not record what you do on a page, and does not upload any tab data.
         </p>
 
         <h2>2. The only outbound request</h2>
         <p>
-          AI summaries are optional. Only when you enter your own API key and press “Summarize” is the text of the
-          current item sent to <strong>the provider you selected</strong> (OpenAI / DeepSeek / Qwen), under your
-          agreement with that provider. Without a key the feature is unavailable and everything else still works.
+          <strong>Shelf Tabs makes no outbound requests at all.</strong>Everything it does happens on your machine.
+        </p>
+        <p>
+          For <strong>Shelf</strong>, AI summaries are optional. Only when you enter your own API key and press
+          “Summarize” is the text of the current item sent to <strong>the provider you selected</strong>
+          (OpenAI / DeepSeek / Qwen), under your agreement with that provider.
         </p>
 
-        <h2>3. Page access</h2>
+        <h2>3. Page and tab access</h2>
         <p>
-          The extension requests access to http/https sites solely to read the current tab’s HTML when you press
-          “Save page” or Alt+S. It does not modify, inject into, or alter any third-party page.
+          <strong>Shelf</strong> requests access to http/https sites solely to read the current tab’s HTML when you
+          press “Save page” or Alt+S. It does not modify, inject into, or alter any third-party page.
+        </p>
+        <p>
+          <strong>Shelf Tabs</strong> uses the <code>chrome.tabs</code> permission to read the title, URL and favicon
+          address of tabs in your current window, for display, search and session snapshots. It does not read page
+          content, inject scripts, rewrite links, or transmit any of this data anywhere.
         </p>
 
         <h2>4. Ads and sponsorship</h2>
         <p>
-          Sponsored slots appear only inside the extension’s own interface (bottom of the shelf, end of an article).
-          Impressions and clicks are counted locally only, so that aggregate, non-identifying figures can be shared
-          with a sponsor later. No ad SDK, no cross-site tracking, no browsing history attached to ad requests.
+          Sponsored slots appear only inside the extensions’ own interfaces (bottom of the Shelf library, end of an
+          article, bottom of the Shelf Tabs list and sessions list). Impressions and clicks are counted locally only.
+          No ad SDK, no cross-site tracking, no browsing history attached to ad requests.
         </p>
 
         <h2>5. What we do not collect</h2>
@@ -166,8 +195,12 @@
 
         <h2>6. Deletion and portability</h2>
         <p>
-          Settings offers three exports: one combined Markdown file, a zip with one file per article, and a full
-          JSON backup. Uninstalling removes all local data irreversibly — export first.
+          <strong>Shelf</strong> offers three exports: one combined Markdown file, a zip with one file per article,
+          and a full JSON backup. <strong>Shelf Tabs</strong> can export all sessions as JSON and import them back.
+        </p>
+        <p>
+          Both extensions store data only on your device. Uninstalling removes all local data irreversibly —
+          export first.
         </p>
 
         <h2>7. Children</h2>
