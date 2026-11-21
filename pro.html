@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shelf Pro — 计划中 / planned</title>
+    <meta name="description" content="Shelf Pro: one-time purchase, still local-first. Full-text index, linked-note export, encrypted local backup." />
+    <style>
+      :root {
+        --bg: #fbfaf7;
+        --surface: #fff;
+        --ink: #23231f;
+        --ink2: #5f5e5a;
+        --ink3: #918e85;
+        --line: rgba(35, 35, 31, 0.13);
+        --accent: #b1741a;
+        --serif: Georgia, "Songti SC", "Noto Serif CJK SC", serif;
+        --sans: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font: 400 15px/1.75 var(--sans);
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 700px; margin: 0 auto; padding: 70px 26px 90px; }
+      .back { font-size: 13px; display: inline-block; margin-bottom: 26px; color: var(--ink3); text-decoration: none; }
+      h1 {
+        font-family: var(--serif);
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.25;
+        margin: 0 0 8px;
+        letter-spacing: -0.015em;
+      }
+      .meta { font-size: 12.5px; color: var(--ink3); margin: 0 0 40px; }
+      h2 {
+        font-family: var(--serif);
+        font-size: 19px;
+        font-weight: 500;
+        margin: 40px 0 10px;
+      }
+      p, li { color: var(--ink2); }
+      ul { padding-left: 20px; }
+      li { margin-bottom: 8px; }
+      strong { color: var(--ink); font-weight: 500; }
+      .note {
+        border-left: 2px solid var(--accent);
+        padding: 2px 0 2px 14px;
+        margin: 22px 0;
+        font-size: 14px;
+        color: var(--ink2);
+      }
+      .price {
+        display: inline-block;
+        border: 0.5px solid var(--line);
+        border-radius: 10px;
+        padding: 14px 18px;
+        background: var(--surface);
+        margin: 4px 0 8px;
+      }
+      .price b { font-family: var(--serif); font-size: 24px; font-weight: 500; color: var(--ink); }
+      .price span { font-size: 13px; color: var(--ink3); display: block; margin-top: 3px; }
+      .cta {
+        display: inline-block;
+        margin-top: 10px;
+        background: var(--ink);
+        color: var(--bg);
+        text-decoration: none;
+        font-size: 13.5px;
+        padding: 9px 20px;
+        border-radius: 8px;
+      }
+      hr { border: none; border-top: 0.5px solid var(--line); margin: 46px 0 34px; }
+      .en h1 { font-size: 26px; }
+      footer { margin-top: 60px; font-size: 12.5px; color: var(--ink3); }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a class="back" href="./index.html">← Shelf</a>
+
+      <h1>Shelf Pro</h1>
+      <p class="meta">计划中，尚未开放购买 / Planned, not for sale yet</p>
+
+      <h2>会包含什么</h2>
+      <ul>
+        <li><strong>全文索引</strong>：跨库倒排索引，搜索不再每次全表扫描，条目到几万条仍然瞬时返回。</li>
+        <li><strong>双链笔记导出</strong>：把剪藏导出成带双向链接的笔记，而不是一堆孤立文件。</li>
+        <li><strong>本地加密备份</strong>：导出加密包，密钥只在你手里，可以放进任意网盘而不担心被读。</li>
+      </ul>
+
+      <div class="note">
+        所有 Pro 功能仍然跑在你自己的机器上。没有服务器，没有账号，没有订阅到期后锁住数据这回事。
+        买断的是功能，不是你的数据。
+      </div>
+
+      <h2>定价方向</h2>
+      <div class="price">
+        <b>一次性买断</b>
+        <span>预计 $9–15，最终以正式发布时为准。不做订阅，不做按月计费。</span>
+      </div>
+
+      <h2>为什么还没开卖</h2>
+      <p>
+        商店版本本身还在审核流程里。在确认真的有人愿意买之前，我不会先去搭一套支付系统——
+        那样做出来大概率是一个没人用的支付页面。
+      </p>
+      <p>
+        顺序是反过来的：先把免费版放出去，看有多少人真的在用、真的会因为缺全文索引而难受，
+        再决定要不要把 Pro 做出来，以及做到什么程度。这条路上有可能的结论是「Pro 不值得做」，
+        那也是一种结果。
+      </p>
+
+      <h2>想表达兴趣</h2>
+      <p>
+        在仓库开一个 issue 说一声就行，一句话就够，我会在做之前来问你的具体需求：
+        <a href="https://github.com/Heand-Broken/shelf-site/issues">github.com/Heand-Broken/shelf-site/issues</a>
+      </p>
+
+      <hr />
+
+      <div class="en">
+        <h1>Shelf Pro</h1>
+        <p class="meta">Planned, not for sale yet</p>
+
+        <h2>What it would include</h2>
+        <ul>
+          <li><strong>A real full-text index</strong> — an inverted index across the whole library, so search stays instant instead of scanning every entry.</li>
+          <li><strong>Linked-note export</strong> — clip pages into notes with backlinks rather than a folder of loose files.</li>
+          <li><strong>Encrypted local backup</strong> — export an encrypted bundle; the key never leaves your machine, so any cloud drive will do.</li>
+        </ul>
+
+        <div class="note">
+          Everything in Pro still runs on your own machine. No server, no account, and nothing that
+          locks your data behind an expired subscription. You buy features, not your data.
+        </div>
+
+        <h2>Where the price is heading</h2>
+        <div class="price">
+          <b>One-time purchase</b>
+          <span>Expected $9–15, final price set at launch. No subscription, no monthly billing.</span>
+        </div>
+
+        <h2>Why it is not for sale yet</h2>
+        <p>
+          The free version is still going through store review. I am not going to build a payment
+          system before there is any evidence that anyone would pay for it — the likely result of
+          doing it in the other order is a checkout page nobody uses.
+        </p>
+        <p>
+          The order is: ship the free version, see how many people actually use it and how many
+          actually need a full-text index, then decide whether Pro is worth building and how far
+          to take it. "Pro is not worth building" is a possible outcome of that, and a fine one.
+        </p>
+
+        <h2>Say you are interested</h2>
+        <p>
+          Open an issue on the repository — one line is enough. I will ask what you actually need
+          before building any of it:
+          <a href="https://github.com/Heand-Broken/shelf-site/issues">github.com/Heand-Broken/shelf-site/issues</a>
+        </p>
+      </div>
+
+      <footer>Shelf · 本地优先 / Local-first · 数据始终在你手上</footer>
+    </div>
+  </body>
+</html>
