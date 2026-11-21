@@ -58,10 +58,10 @@
       <a class="back" href="./index.html">← 拾页 Shelf</a>
 
       <h1>隐私政策</h1>
-      <p class="meta">适用于「拾页 Shelf」（稍后读）、「拾页标签 Shelf Tabs」（标签会话管理）与「拾页剪贴 Shelf Clip」（剪贴板历史）· 最后更新：2026-11-22</p>
+      <p class="meta">适用于「拾页 Shelf」（稍后读）、「拾页标签 Shelf Tabs」（标签会话管理）与「拾页剪贴 Shelf Clip」（剪贴板历史）与「拾页查找 Shelf Find」（网页查找）· 最后更新：2026-11-22</p>
 
       <p>
-        拾页不运营任何服务器，不收集、不上传、不出售用户数据。本文覆盖上述三个扩展，说明这一承诺的具体含义。
+        拾页不运营任何服务器，不收集、不上传、不出售用户数据。本文覆盖上述四个扩展，说明这一承诺的具体含义。
       </p>
 
       <h2>1. 你保存的内容</h2>
@@ -78,10 +78,14 @@
         它监听页面的 <code>copy</code> 事件并只读取你选中的文字，不轮询系统剪贴板、不读取剪贴板里已有的内容，
         也不记录输入框或密码框内的复制。
       </p>
+      <p>
+        <strong>拾页查找 Shelf Find</strong>：你的查询词、来源页面与匹配数量存在本机 IndexedDB 的历史里。
+        查找本身在页面内完成，查询词不发送给任何服务器。
+      </p>
 
       <h2>2. 唯一的对外网络请求</h2>
       <p>
-        <strong>拾页标签与拾页剪贴都不发起任何对外网络请求。</strong>它们的全部功能都在本机完成。
+        <strong>拾页标签、拾页剪贴与拾页查找都不发起任何对外网络请求。</strong>它们的全部功能都在本机完成。
       </p>
       <p>
         <strong>拾页 Shelf</strong>的「AI 摘要」是可选功能。仅当你自行填写 API Key 并点击「生成摘要」时，当前条目的正文会被发送至
@@ -106,10 +110,14 @@
         <strong>拾页剪贴</strong>的 content script 只监听 <code>copy</code> 事件，从当前选中文本取内容。
         它不申请 <code>clipboardRead</code> 权限，不主动读取页面或系统剪贴板，不修改任何网页内容。
       </p>
+      <p>
+        <strong>拾页查找</strong>的 content script 遍历当前页面的可见文本以完成匹配。它不修改页面 DOM
+        （高亮使用浏览器自带的 CSS Highlight 能力，不插入标签），不上传页面内容，也不把查询发送到任何地方。
+      </p>
 
       <h2>4. 广告与赞助</h2>
       <p>
-        赞助位只出现在扩展自身的界面内（拾页的书架底部与阅读器文末；拾页标签的标签列表与会话列表底部；拾页剪贴的剪贴列表与固定列表底部），
+        赞助位只出现在扩展自身的界面内（拾页的书架底部与阅读器文末；拾页标签的标签列表与会话列表底部；拾页剪贴的剪贴列表与固定列表底部；拾页查找的查找页与历史页底部），
         不注入第三方页面。广告的曝光与点击次数仅记录在本机，用于日后向赞助商提供不含个人标识的汇总数据。
         我们不使用广告 SDK、不做跨站追踪、不因广告请求发送任何浏览记录。
       </p>
@@ -124,7 +132,7 @@
       <h2>6. 数据的删除与迁移</h2>
       <p>
         <strong>拾页 Shelf</strong>提供三种导出：单文件 Markdown、每篇一个文件的 zip、完整 JSON 备份。
-        <strong>拾页标签</strong>可把全部会话导出为 JSON；<strong>拾页剪贴</strong>可把全部剪贴导出为 JSON，两者都能从 JSON 导入。
+        <strong>拾页标签</strong>可把全部会话导出为 JSON；<strong>拾页剪贴</strong>可把全部剪贴导出为 JSON，拾页查找可导出查找历史为 JSON；四者都能从 JSON 导入。
       </p>
       <p>
         两个扩展都只把数据存在本机。卸载扩展会同时删除全部本地数据，且不可恢复——请在卸载前导出。
@@ -148,10 +156,10 @@
 
       <div class="en">
         <h1>Privacy Policy</h1>
-        <p class="meta">For “Shelf” (read later), “Shelf Tabs” (tab & session manager) and “Shelf Clip” (clipboard history) · Last updated: 2026-11-22</p>
+        <p class="meta">For “Shelf”, “Shelf Tabs”, “Shelf Clip” and “Shelf Find” · Last updated: 2026-11-22</p>
 
         <p>
-          Neither extension runs a server. Neither collects, uploads, or sells user data. This page covers all three
+          Neither extension runs a server. Neither collects, uploads, or sells user data. This page covers all four
           extensions and explains what that means in practice.
         </p>
 
@@ -172,10 +180,14 @@
           it never polls the system clipboard, never reads pre-existing clipboard content, and ignores copies made
           inside input or password fields.
         </p>
+        <p>
+          <strong>Shelf Find</strong>: your queries, source pages and match counts are stored in local IndexedDB.
+          The search itself runs inside the page; queries are never sent to a server.
+        </p>
 
         <h2>2. The only outbound request</h2>
         <p>
-          <strong>Shelf Tabs and Shelf Clip make no outbound requests at all.</strong>Everything they do happens on your machine.
+          <strong>Shelf Tabs, Shelf Clip and Shelf Find make no outbound requests at all.</strong>Everything they do happens on your machine.
         </p>
         <p>
           For <strong>Shelf</strong>, AI summaries are optional. Only when you enter your own API key and press
@@ -198,11 +210,16 @@
           selection. It does not request the <code>clipboardRead</code> permission, does not read the page or the system
           clipboard on its own, and never modifies any web page.
         </p>
+        <p>
+          <strong>Shelf Find</strong>’s content script walks the visible text of the current page to match your query.
+          It does not modify the page DOM (highlighting uses the browser’s CSS Highlight API rather than inserting
+          elements), does not upload page content, and never transmits a query anywhere.
+        </p>
 
         <h2>4. Ads and sponsorship</h2>
         <p>
           Sponsored slots appear only inside the extensions’ own interfaces (bottom of the Shelf library, end of an
-          article, bottom of the Shelf Tabs list and sessions list, and the Shelf Clip clips and pinned lists). Impressions and clicks are counted locally only.
+          article, bottom of the Shelf Tabs list and sessions list, and the Shelf Clip clips and pinned lists, and the Shelf Find find and history views). Impressions and clicks are counted locally only.
           No ad SDK, no cross-site tracking, no browsing history attached to ad requests.
         </p>
 
@@ -216,10 +233,10 @@
         <h2>6. Deletion and portability</h2>
         <p>
           <strong>Shelf</strong> offers three exports: one combined Markdown file, a zip with one file per article,
-          and a full JSON backup. <strong>Shelf Tabs</strong> can export all sessions as JSON; <strong>Shelf Clip</strong> can export all clips as JSON. Both can import from JSON.
+          and a full JSON backup. <strong>Shelf Tabs</strong> can export all sessions as JSON; <strong>Shelf Clip</strong> can export all clips as JSON. Shelf Find can export its search history as JSON. All four can import from JSON.
         </p>
         <p>
-          All three extensions store data only on your device. Uninstalling removes all local data irreversibly —
+          All four extensions store data only on your device. Uninstalling removes all local data irreversibly —
           export first.
         </p>
 
